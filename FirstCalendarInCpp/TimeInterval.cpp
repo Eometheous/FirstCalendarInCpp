@@ -9,7 +9,7 @@
 #include <time.h>
 #include <string>
 
-TimeInterval::TimeInterval(Time startTime, Time endTime) {
+TimeInterval::TimeInterval(const Time &startTime, const Time &endTime) {
     TimeInterval::startTime = startTime;
     TimeInterval::endTime = endTime;
 }
