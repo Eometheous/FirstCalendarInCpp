@@ -13,13 +13,11 @@
 #include <string>
 #include "Time.hpp"
 
-using namespace std;
-
 class TimeInterval {
     Time startTime, endTime;
     
 public:
-    TimeInterval(Time, Time);
+    TimeInterval(const Time&, const Time&);
     string toString();
 };
 
