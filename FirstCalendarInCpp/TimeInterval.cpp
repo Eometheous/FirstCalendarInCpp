@@ -5,18 +5,30 @@
 //  Created by Jonathan Thomas on 5/29/23.
 //
 
+#include <iomanip>
 #include "TimeInterval.hpp"
 
-TimeInterval::TimeInterval(const tm &start_time, const tm &end_time) {
-    TimeInterval::start_time = start_time;
-    TimeInterval::end_time = end_time;
+TimeInterval::TimeInterval() {}
+TimeInterval::TimeInterval(const Time &start, const Time &end) {
+    if (start > end) throw invalid_argument("start time cannot be after end time");
+    this->start = start;
+    this->end = end;
 }
 
-tm TimeInterval::get_start_time() const {return TimeInterval::start_time;}
-tm TimeInterval::get_end_time() const {return TimeInterval::end_time;}
+Time TimeInterval::get_start() {return start;}
+Time TimeInterval::get_end() {return end;}
+void TimeInterval::set_start(const Time &new_start) {start = new_start;}
+void TimeInterval::set_end(const Time &new_end) {end = new_end;}
+
+istream& operator>> (istream &is, TimeInterval &time_interval) {
+    char dash = '-';
+    Time start, end;
+    is >> start >> dash >> end;
+    time_interval.set_start(start);
+    time_interval.set_end(end);
+    return is;
+}
 
 ostream& operator<< (ostream &os, const TimeInterval &time_interval) {
-    tm start_time = time_interval.get_start_time();
-    tm end_time = time_interval.get_end_time();
-    return os << start_time.tm_hour << ":" << setfill('0') << setw(2) << start_time.tm_min << " - "  << end_time.tm_hour << + ":" << setfill('0') << setw(2) << end_time.tm_min;
+    return os << time_interval.start << " - " << time_interval.end;
 }

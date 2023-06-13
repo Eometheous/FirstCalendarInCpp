@@ -9,23 +9,24 @@
 #define TimeInterval_hpp
 
 #include <stdio.h>
-#include <iomanip>
 #include <iostream>
-#include <ctime>
-
-using namespace std;
+#include "Time.hpp"
 
 class TimeInterval {
-    tm start_time, end_time;
+    Time start;
+    Time end;
     
 public:
-    TimeInterval(const tm&, const tm&);
+    TimeInterval();
+    TimeInterval(const Time&, const Time&);
+
+    Time get_start();
+    Time get_end();
+    void set_start(const Time&);
+    void set_end(const Time&);
     
-    tm get_start_time() const;
-    tm get_end_time() const;
-    
-    friend istream& operator>> (istream&, TimeInterval&);
-    friend ostream& operator<< (ostream&, const TimeInterval&);
+    friend std::istream& operator>> (std::istream&, TimeInterval&);
+    friend std::ostream& operator<< (std::ostream&, const TimeInterval&);
 };
 
 #endif /* TimeInterval_hpp */
