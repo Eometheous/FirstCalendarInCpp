@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		071D51AC2A257A020053B3F4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 071D51AB2A257A020053B3F4 /* main.cpp */; };
 		071D51B52A257CDC0053B3F4 /* TimeInterval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 071D51B32A257CDC0053B3F4 /* TimeInterval.cpp */; };
+		072E7DFE2A32854C00B13F7D /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 072E7DFC2A32854C00B13F7D /* Event.cpp */; };
+		077696102A37CEA900B7F1CC /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0776960E2A37CEA900B7F1CC /* Time.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		071D51AB2A257A020053B3F4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		071D51B32A257CDC0053B3F4 /* TimeInterval.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TimeInterval.cpp; sourceTree = "<group>"; };
 		071D51B42A257CDC0053B3F4 /* TimeInterval.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TimeInterval.hpp; sourceTree = "<group>"; };
+		072E7DFC2A32854C00B13F7D /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		072E7DFD2A32854C00B13F7D /* Event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Event.hpp; sourceTree = "<group>"; };
+		0776960E2A37CEA900B7F1CC /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		0776960F2A37CEA900B7F1CC /* Time.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,13 @@
 		071D51AA2A257A020053B3F4 /* FirstCalendarInCpp */ = {
 			isa = PBXGroup;
 			children = (
+				072E7DFC2A32854C00B13F7D /* Event.cpp */,
+				072E7DFD2A32854C00B13F7D /* Event.hpp */,
 				071D51AB2A257A020053B3F4 /* main.cpp */,
 				071D51B32A257CDC0053B3F4 /* TimeInterval.cpp */,
 				071D51B42A257CDC0053B3F4 /* TimeInterval.hpp */,
+				0776960E2A37CEA900B7F1CC /* Time.cpp */,
+				0776960F2A37CEA900B7F1CC /* Time.hpp */,
 			);
 			path = FirstCalendarInCpp;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077696102A37CEA900B7F1CC /* Time.cpp in Sources */,
+				072E7DFE2A32854C00B13F7D /* Event.cpp in Sources */,
 				071D51AC2A257A020053B3F4 /* main.cpp in Sources */,
 				071D51B52A257CDC0053B3F4 /* TimeInterval.cpp in Sources */,
 			);
